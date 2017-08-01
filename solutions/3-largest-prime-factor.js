@@ -6,6 +6,7 @@ var findLargestPrimeFactor = function( n ){
   if( n % 2 === 0 ){
 
     while( n % 2 === 0 ){
+      console.log( '2' );
       n = n/2;
     }
 
@@ -17,11 +18,14 @@ var findLargestPrimeFactor = function( n ){
 
     while( n % i === 0 ){
 
+      console.log( i );
+
       if( i > largest ){
         largest = i;
       }
 
       n = n / i;
+      console.log( n );
     }
   }
 
@@ -32,4 +36,4 @@ var findLargestPrimeFactor = function( n ){
   console.log( 'largest prime factor: ', largest );
 };
 
-findLargestPrimeFactor( 600851475143 );
+findLargestPrimeFactor( 2432 );
